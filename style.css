@@ -1,4 +1,4 @@
-* {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -82,7 +82,7 @@
       margin-top: 70px;
     }
 
-/* DARK OVERLAY */
+    /* DARK OVERLAY */
     .hero::before {
       content: "";
       position: absolute;
@@ -129,7 +129,6 @@
       color: black;
     }
 
-    /* LEFT/RIGHT ARROWS */
     .arrow {
       position: absolute;
       top: 50%;
@@ -150,7 +149,6 @@
       transform: translateY(-50%) scale(1.1);
     }
 
-    /* Left and Right positioning */
     .arrow.left {
       left: 25px;
     }
@@ -159,7 +157,6 @@
       right: 25px;
     }
 
-    /* SECTIONS */
     section {
       padding: 60px 50px;
     }
@@ -178,7 +175,7 @@
       justify-content: center;
     }
 
-   .movie {
+    .movie {
       position: relative;
       border-radius: 15px;
       overflow: hidden;
@@ -234,35 +231,36 @@
       cursor: pointer;
     }
 
-    /* FOOTER */
     footer {
       background: linear-gradient(to top, #00BFFF, #3C50B2);
       display: flex;
-      justify-content: center;
+      justify-content: center; 
       align-items: center;
       position: relative;
-      padding: 30px 20px;
+      padding: 20px 20px;
       border-top: 1px solid #222;
       color: white;
     }
 
-    /* FIXED LEFT LOGO */
     .footer-left {
-      position: fixed;
-      bottom: 15px;
+      position: static;  
+      bottom: 15px; 
       left: 40px;
       z-index: 100;
     }
 
     .footer-left img {
-      height: 45px;
+      height: 60px;
       width: auto;
     }
 
-    /* CENTER FOOTER TEXT */
     .footer-center {
       text-align: center;
       flex: 1;
+    }
+
+    .footer-center nav {
+      justify-content: center;
     }
 
     .footer-center nav a {
@@ -282,7 +280,6 @@
       color: #fff;
     }
 
-    /* RIGHT SIDE FOLLOW US */
     .footer-right {
       position: absolute;
       right: 60px;
