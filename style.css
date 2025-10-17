@@ -78,7 +78,7 @@
           align-items: flex-end;
           justify-content: flex-start;
           padding: 60px 50px;
-          margin-top: 70px;
+          margin-top: 0px;
         }
 
         .hero::before {
