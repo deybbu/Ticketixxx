@@ -1,16 +1,26 @@
-// ===== Smooth Scroll for Navigation =====
+// ===== Smooth Scroll for Navigation (Header Offset Fixed) =====
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', function (e) {
-    if (this.getAttribute('href').startsWith('#')) {
+    const href = this.getAttribute('href');
+
+    // Only handle internal section links (like #now-showing)
+    if (href && href.startsWith('#')) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const target = document.querySelector(targetId);
+      const target = document.querySelector(href);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight + 5; 
+        // The +5 makes it slightly spaced below the header (optional)
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
       }
     }
   });
 });
+
 
 // ===== Movie Description Modal =====
 const movieData = {
